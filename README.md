@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧩 @ioasys/ion Starter Kit for Next.js
 
-## Getting Started
+Bem-vindo ao **@ioasys/ion Starter Kit**, o ponto de partida oficial para criar aplicações **Next.js** utilizando o **design system privado [@ioasys/ion](https://ion.ioasys.com.br)**.
 
-First, run the development server:
+Este template foi desenvolvido pela **ioasys** para oferecer uma base moderna, consistente e integrada com as boas práticas do time de frontend.
+
+---
+
+## 🚀 Iniciando um novo projeto
+
+Crie um novo projeto Next.js a partir deste template com o comando abaixo:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npx create-next-app@latest --example "https://github.com/ioasys/ion-starter-kit-nextjs" [nome-do-projeto]
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+> Substitua `[nome-do-projeto]` pelo nome desejado para seu novo repositório.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ⚙️ Pré-requisitos
 
-## Learn More
+Antes de começar, garanta que você tenha instalado:
 
-To learn more about Next.js, take a look at the following resources:
+- **Node.js** (versão LTS recomendada)
+- **npm**, **yarn**, **pnpm** ou **bun**
+- **Git** (necessário para clonar o template via `create-next-app`)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 💻 Como rodar o projeto
 
-## Deploy on Vercel
+Após clonar ou criar o projeto, instale as dependências e execute o servidor de desenvolvimento:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm install
+npm run dev
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+A aplicação estará disponível em [http://localhost:3000](http://localhost:3000).
+
+---
+
+## 📚 Recursos e Documentação
+
+- **Documentação oficial do @ioasys/ion**  
+  Acesse a documentação do design system para conhecer componentes, tokens e guidelines:  
+  👉 [https://ion.ioasys.com.br](https://ion.ioasys.com.br)
+
+- **Wikijs da ioasys**  
+  Repositório central com diretrizes, padrões de código e processos do time de frontend:  
+  👉 [https://wikijs.ioasys.com.br](https://wikijs.ioasys.com.br)
+
+---
+
+## 🧠 Sobre o Ion
+
+O **@ioasys/ion** é o design system privado da ioasys, criado para garantir **consistência visual**, **qualidade de código** e **eficiência no desenvolvimento** das interfaces dos produtos da empresa.  
+Este starter kit traz uma configuração base pronta para uso, com:
+
+- Estrutura Next.js 15
+- Integração com o design system Ion
+- Configuração inicial de tipografia e tokens
+- Ambiente pronto para Storybook, lint e testes
+<!-- - Suporte a temas (light/dark)/ -->
+
+---
+
+## 🏗️ Estrutura do projeto
+
+```
+├── public/              # Assets públicos (ícones, logos, etc.)
+├── src/
+│   ├── app/             # Rotas e páginas Next.js
+│   ├── components/      # Componentes
+│   ├── contexts/        # React contexts e providers
+│   ├── hooks/           # Hooks reutilizáveis
+│   ├── services/        # Chamadas a APIs e integrações
+│   ├── types/           # Tipagens TypeScript
+│   ├── styles/          # Configurações de tema e Tailwind
+│   └── utils/           # Funções auxiliares
+├── package.json
+└── README.md
+```
+
+---
+
+## 🧩 Licença
+
+Este projeto é de uso **interno da ioasys**.  
+O conteúdo, código e design system **não devem ser compartilhados publicamente** sem autorização prévia.
+
+---
+
+**ioasys © 2025** — Starter Kit Ion + Next.js  
+Desenvolvido com 💜 pelo time de frontend.
