@@ -1,13 +1,13 @@
 import '@/styles/global.css'
 
 export default function RootLayout({
-  children,
+	children,
 }: Readonly<{
-  children: React.ReactNode
+	children: React.ReactNode
 }>) {
-  return (
-    <html lang="pt-BR">
-      <body className="antialiased">{children}</body>
-    </html>
-  )
+	return (
+		<html lang='pt-BR'>
+			<body className='antialiased'>{children}</body>
+		</html>
+	)
 }
