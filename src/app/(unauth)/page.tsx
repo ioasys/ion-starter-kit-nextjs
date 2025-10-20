@@ -1,8 +1,7 @@
 'use client'
 
-import Image from 'next/image'
-
 import { Button, Typography } from '@ioasys/ion'
+import Image from 'next/image'
 
 import pkg from '../../../package.json'
 
@@ -11,28 +10,28 @@ export default function HomePage() {
 		<main className='bg-primary-softer flex min-h-screen flex-col items-center justify-center p-10'>
 			<div className='flex w-full max-w-5xl flex-col items-center justify-center gap-8 rounded-2xl bg-white px-10 pb-10 shadow-sm'>
 				<Image
-					src='/ion-web.svg'
 					alt='@ioasys/ion logo'
-					width={340}
 					height={78}
 					priority
+					src='/ion-web.svg'
+					width={340}
 				/>
 
 				<div className='space-y-3 text-center'>
 					<Typography
 						as='h1'
-						typeface='title-normal'
-						size='medium'
 						className='text-typeface-main mb-6'
+						size='medium'
+						typeface='title-normal'
 					>
 						Bem-vindo ao Ion Starter Kit for Next.js
 					</Typography>
 
 					<Typography
 						as='p'
-						typeface='body'
-						size='medium'
 						className='text-typeface-main'
+						size='medium'
+						typeface='body'
 					>
 						Este é um projeto modelo para iniciar aplicações utilizando o design
 						system <strong>@ioasys/ion</strong>, privado e mantido pela ioasys.
@@ -40,17 +39,17 @@ export default function HomePage() {
 
 					<div className='mt-4 flex items-center justify-center gap-4'>
 						<Button
-							rel='noopener noreferrer'
 							onClick={() => window.open('https://ion.ioasys.com.br', '_blank')}
+							rel='noopener noreferrer'
 						>
 							Documentação do ion
 						</Button>
 						<Button
 							appearance='outline'
-							rel='noopener noreferrer'
 							onClick={() =>
 								window.open('https://wikijs.ioasys.com.br', '_blank')
 							}
+							rel='noopener noreferrer'
 						>
 							Wikijs da ioasys
 						</Button>
@@ -61,9 +60,9 @@ export default function HomePage() {
 					<div>
 						<Typography
 							as='h3'
-							typeface='subtitle-normal'
-							size='large'
 							className='text-typeface-main'
+							size='large'
+							typeface='subtitle-normal'
 						>
 							Dependencies
 						</Typography>
@@ -72,9 +71,9 @@ export default function HomePage() {
 								<li key={dep}>
 									<Typography
 										as='p'
-										typeface='body'
-										size='small'
 										className='text-typeface-main'
+										size='small'
+										typeface='body'
 									>
 										{dep}: <strong>{version}</strong>
 									</Typography>
@@ -86,9 +85,9 @@ export default function HomePage() {
 					<div>
 						<Typography
 							as='h3'
-							typeface='subtitle-normal'
-							size='large'
 							className='text-typeface-main'
+							size='large'
+							typeface='subtitle-normal'
 						>
 							Dev Dependencies
 						</Typography>
@@ -97,9 +96,9 @@ export default function HomePage() {
 								<li key={dep}>
 									<Typography
 										as='p'
-										typeface='body'
-										size='small'
 										className='text-typeface-main'
+										size='small'
+										typeface='body'
 									>
 										{dep}: <strong>{version}</strong>
 									</Typography>

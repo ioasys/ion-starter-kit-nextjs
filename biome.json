@@ -22,10 +22,7 @@
 			}
 		},
 		"enabled": true,
-		"includes": [
-			"apps/**/*.{js,ts,jsx,tsx,mdx}",
-			"packages/**/*.{js,ts,jsx,tsx,mdx}"
-		]
+		"includes": ["src/**/*.{js,ts,jsx,tsx,mdx}"]
 	},
 	"files": {
 		"ignoreUnknown": true,
