@@ -59,6 +59,9 @@
 		}
 	},
 	"linter": {
+		"domains": {
+			"next": "recommended"
+		},
 		"enabled": true,
 		"rules": {
 			"recommended": false,

@@ -1,36 +1,36 @@
 {
-  "name": "ion-starter-kit",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "biome check .",
-    "lint:fix": "biome check --write .",
-    "lint:report": "biome check --reporter=json > biome-report.json && node ./scripts/biome-to-eslint.js ./biome-report.json",
-    "format": "biome format .",
-    "format:check": "biome format --check .",
-    "lint:staged": "lint-staged",
-    "check-types": "tsc --noemit",
-    "prepare": "husky",
-    "prettier": "prettier --write src/*"
-  },
-  "dependencies": {
-    "@ioasys/ion": "0.4.1",
-    "next": "15.5.6",
-    "react": "19.1.0",
-    "react-dom": "19.1.0"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "2.2.6",
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "husky": "^9.1.7",
-    "lint-staged": "^16.2.4",
-    "tailwindcss": "^4",
-    "typescript": "^5"
-  }
+	"name": "ion-starter-kit",
+	"version": "1.0.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "biome check .",
+		"lint:fix": "biome check --write .",
+		"lint:report": "biome check --reporter=json > biome-report.json && node ./scripts/biome-to-eslint.js ./biome-report.json",
+		"format": "biome format .",
+		"format:check": "biome format --check .",
+		"lint:staged": "lint-staged",
+		"check-types": "tsc --noemit",
+		"prepare": "husky",
+		"prettier": "prettier --write src/*"
+	},
+	"dependencies": {
+		"@ioasys/ion": "0.4.1",
+		"next": "15.5.6",
+		"react": "19.1.0",
+		"react-dom": "19.1.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.2.6",
+		"@tailwindcss/postcss": "^4",
+		"@types/node": "^20",
+		"@types/react": "^19",
+		"@types/react-dom": "^19",
+		"husky": "^9.1.7",
+		"lint-staged": "^16.2.4",
+		"tailwindcss": "^4",
+		"typescript": "^5"
+	}
 }
