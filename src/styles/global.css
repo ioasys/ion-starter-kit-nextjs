@@ -6,4 +6,4 @@
 @import "@ioasys/ion/theme/common.css";
 @import "@ioasys/ion/theme/typography.css";
 @import "@ioasys/ion/theme/light.css";
-@source '../../node_modules/@ioasys/ion';
+@source "../../node_modules/@ioasys/ion";

@@ -41,3 +41,7 @@ yarn-error.log*
 next-env.d.ts
 
 Makefile
+
+# reports
+eslint-report.json
+biome-report.json
