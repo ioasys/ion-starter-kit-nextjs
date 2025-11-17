@@ -2,6 +2,12 @@
 	"name": "ion-starter-kit",
 	"version": "1.0.0",
 	"private": true,
+	"authors": ["Rodrigo Santos <rodrigosantos@ioasys.com.br>"],
+	"description": "A starter kit for building applications with @ioasys/ion and Next.js.",
+	"engines": {
+		"node": ">=22.0.0",
+		"yarn": "use npm!"
+	},
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
@@ -31,9 +37,5 @@
 		"lint-staged": "^16.2.6",
 		"tailwindcss": "^4",
 		"typescript": "^5"
-	},
-	"engines": {
-		"node": ">=22.0.0",
-		"yarn": "use npm!"
 	}
 }
