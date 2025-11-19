@@ -1,11 +1,15 @@
-import { type ButtonProps, Typography, type TypographyProps } from '@ioasys/ion'
+import type { ButtonProps, TypographyProps } from '@ioasys/ion'
 import { render, screen } from '@testing-library/react'
 import { describe, expect, it, vi } from 'vitest'
 
 import HomePage from './page'
 
 vi.mock('next/image', () => ({
-	default: (props: any) => <img {...props} />,
+	__esModule: true,
+	default: ({ priority, ...props }: { priority?: boolean }) => {
+		// biome-ignore lint/performance/noImgElement: img element is required for mocking Next.js Image component in tests
+		return <img alt='' data-testid='mock-image' {...props} />
+	},
 }))
 
 vi.mock('@ioasys/ion', () => ({

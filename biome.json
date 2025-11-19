@@ -1,55 +1,84 @@
 {
-	"assist": {
-		"actions": {
-			"source": {
-				"organizeImports": {
-					"level": "on",
-					"options": {
-						"groups": [
-							":PACKAGE:",
-							":BLANK_LINE:",
-							[":NODE:", ":BUN:"],
-							":BLANK_LINE:",
-							":ALIAS:",
-							":BLANK_LINE:",
-							":PATH:"
-						]
-					}
-				},
-				"useSortedAttributes": "on",
-				"useSortedKeys": "on"
-			}
-		},
+	"$schema": "https://biomejs.dev/schemas/2.3.6/schema.json",
+	"vcs": {
+		"clientKind": "git",
 		"enabled": true,
-		"includes": ["src/**/*.{js,ts,jsx,tsx,md,mdx}"]
-	},
-	"css": {
-		"parser": {
-			"tailwindDirectives": true
-		}
+		"useIgnoreFile": true
 	},
 	"files": {
 		"ignoreUnknown": true,
-		"maxSize": 10000000
+		"maxSize": 10000000,
+		"includes": [
+			"**",
+			"!**/node_modules",
+			"!**/.next",
+			"!**/dist",
+			"!**/build",
+			"!**/coverage"
+		]
 	},
 	"formatter": {
-		"attributePosition": "auto",
-		"bracketSameLine": false,
-		"bracketSpacing": true,
 		"enabled": true,
-		"expand": "auto",
 		"formatWithErrors": false,
 		"indentStyle": "tab",
 		"indentWidth": 2,
 		"lineEnding": "lf",
 		"lineWidth": 80,
+		"attributePosition": "auto",
+		"bracketSameLine": false,
+		"bracketSpacing": true,
 		"useEditorconfig": true
 	},
-	"html": { "formatter": { "selfCloseVoidElements": "always" } },
+	"assist": { "actions": { "source": { "organizeImports": "on" } } },
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"a11y": {
+				"recommended": true
+			},
+			"complexity": {
+				"recommended": true,
+				"noUselessFragments": "error",
+				"useOptionalChain": "error"
+			},
+			"correctness": {
+				"recommended": true,
+				"noUnusedVariables": "error",
+				"useExhaustiveDependencies": "warn",
+				"useHookAtTopLevel": "error"
+			},
+			"security": {
+				"noDangerouslySetInnerHtml": "warn"
+			},
+			"style": {
+				"recommended": true,
+				"noNonNullAssertion": "warn",
+				"useBlockStatements": "off",
+				"useConst": "error",
+				"useImportType": "error",
+				"useNodejsImportProtocol": "error",
+				"useSelfClosingElements": "error",
+				"useTemplate": "error"
+			},
+			"suspicious": {
+				"recommended": true,
+				"noArrayIndexKey": "warn",
+				"noConsole": {
+					"level": "warn",
+					"options": {
+						"allow": ["warn", "error", "info"]
+					}
+				},
+				"noDebugger": "warn",
+				"noDoubleEquals": "error",
+				"noExplicitAny": "warn"
+			}
+		}
+	},
 	"javascript": {
 		"formatter": {
 			"arrowParentheses": "always",
-			"attributePosition": "auto",
 			"bracketSameLine": false,
 			"bracketSpacing": true,
 			"jsxQuoteStyle": "single",
@@ -59,12 +88,75 @@
 			"trailingCommas": "es5"
 		}
 	},
-	"linter": {
-		"enabled": true,
-		"rules": {
-			"recommended": false,
-			"style": { "useBlockStatements": "off", "useImportType": "on" }
+	"json": {
+		"formatter": {
+			"trailingCommas": "none"
 		}
 	},
-	"vcs": { "clientKind": "git", "enabled": true, "useIgnoreFile": true }
+	"css": {
+		"parser": {
+			"cssModules": true,
+			"tailwindDirectives": true
+		},
+		"formatter": {
+			"enabled": true,
+			"quoteStyle": "double"
+		}
+	},
+	"overrides": [
+		{
+			"includes": ["**/*.{test,spec}.{ts,tsx}"],
+			"linter": {
+				"rules": {
+					"suspicious": {
+						"noExplicitAny": "off"
+					}
+				}
+			}
+		},
+		{
+			"includes": ["vitest.setup.ts", "vitest.config.ts", "vitest.config.mts"],
+			"linter": {
+				"rules": {
+					"suspicious": {
+						"noExplicitAny": "off"
+					}
+				}
+			}
+		},
+		{
+			"includes": ["src/components/atoms/Icons/**/*.tsx"],
+			"linter": {
+				"rules": {
+					"a11y": {
+						"noSvgWithoutTitle": "off",
+						"useSemanticElements": "off"
+					}
+				}
+			}
+		},
+		{
+			"includes": ["src/components/atoms/Label/**/*.tsx"],
+			"linter": {
+				"rules": {
+					"a11y": {
+						"noLabelWithoutControl": "off"
+					}
+				}
+			}
+		},
+		{
+			"includes": ["vitest.setup.ts"],
+			"linter": {
+				"rules": {
+					"a11y": {
+						"useButtonType": "off"
+					},
+					"suspicious": {
+						"noExplicitAny": "off"
+					}
+				}
+			}
+		}
+	]
 }
