@@ -1,4 +1,4 @@
-import type { ButtonProps, TypographyProps } from '@ioasys/ion'
+import type { ButtonProps, TypographyProps } from '@ioasys/ion-react'
 import { render, screen } from '@testing-library/react'
 import { describe, expect, it, vi } from 'vitest'
 

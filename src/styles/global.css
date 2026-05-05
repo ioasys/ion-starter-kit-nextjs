@@ -3,7 +3,7 @@
 @import "tailwindcss";
 
 /* @ioasys/ion Styles */
-@import "@ioasys/ion/theme/common.css";
-@import "@ioasys/ion/theme/typography.css";
-@import "@ioasys/ion/theme/light.css";
-@source "../../node_modules/@ioasys/ion";
+@import "@ioasys/ion-react/theme/common.css";
+@import "@ioasys/ion-react/theme/typography.css";
+@import "@ioasys/ion-react/theme/light.css";
+@source "../../node_modules/@ioasys/ion-react";

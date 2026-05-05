@@ -1,6 +1,6 @@
 'use client'
 
-import { Button, Typography } from '@ioasys/ion'
+import { Button, Typography } from '@ioasys/ion-react'
 import Image from 'next/image'
 
 import pkg from '../../../package.json'
