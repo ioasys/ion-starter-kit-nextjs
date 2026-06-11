@@ -1,6 +1,6 @@
-# 🧩 @ioasys/ion Starter Kit for Next.js
+# 🧩 @ioasys/ion-react Starter Kit for Next.js
 
-Bem-vindo ao **@ioasys/ion Starter Kit**, o ponto de partida oficial para criar aplicações **Next.js** utilizando o **design system privado [@ioasys/ion](https://ion.ioasys.com.br)**.
+Bem-vindo ao **@ioasys/ion-react Starter Kit**, o ponto de partida oficial para criar aplicações **Next.js** utilizando o **design system privado [@ioasys/ion](https://ion.ioasys.com.br)**.
 
 Este template foi desenvolvido pela **ioasys** para oferecer uma base moderna, consistente e integrada com as boas práticas do time de frontend.
 

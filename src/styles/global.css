@@ -1,9 +1,23 @@
+/* Font Default */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-@import "tailwindcss";
-
-/* @ioasys/ion Styles */
+/* Theme Common (animações, primitivos, importa o tailwindcss) */
 @import "@ioasys/ion-react/theme/common.css";
-@import "@ioasys/ion-react/theme/typography.css";
+
+/* Theme Reference (paleta de cores, fontes, color-scheme, custom-variant dark) */
+@import "@ioasys/ion-react/theme/reference.css";
+
+/* Theme Dimensions (tokens responsíveis: typography, icon, shape, spacing, radius, outline) */
+@import "@ioasys/ion-react/theme/dimensions.css";
+
+/* Theme Light (tokens semânticos do tema claro) */
 @import "@ioasys/ion-react/theme/light.css";
+
+/* Theme Dark (automático via prefers-color-scheme + opt-in via data-theme="dark") */
+@import "@ioasys/ion-react/theme/dark.css";
+
+/* Theme Typography (classes utilitárias: headline-default-lg, body-default-md, label-default-sm, etc.) */
+@import "@ioasys/ion-react/theme/typography.css";
+
+/* ion Styles */
 @source "../../node_modules/@ioasys/ion-react";

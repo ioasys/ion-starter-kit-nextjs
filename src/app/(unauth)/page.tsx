@@ -3,35 +3,48 @@
 import { Button, Typography } from '@ioasys/ion-react'
 import Image from 'next/image'
 
+import { ThemeToggle } from '@/components/atoms/ThemeToggle'
 import pkg from '../../../package.json'
 
 export default function HomePage() {
 	return (
 		<main className='bg-primary-softer flex min-h-screen flex-col items-center justify-center p-10'>
-			<div className='flex w-full max-w-5xl flex-col items-center justify-center gap-8 rounded-2xl bg-white px-10 pb-10 shadow-sm'>
+			<div className='bg-surface-default relative flex w-full max-w-5xl flex-col items-center justify-center gap-8 rounded-2xl px-10 pb-10 shadow-sm'>
+				<div className='absolute top-4 right-4'>
+					<ThemeToggle />
+				</div>
 				<Image
-					alt='@ioasys/ion logo'
+					alt='@ioasys/ion-react logo'
+					className='dark:hidden'
 					height={78}
 					priority
 					src='/ion-web.svg'
+					width={340}
+				/>
+				<Image
+					alt='@ioasys/ion-react logo'
+					className='hidden dark:block'
+					height={78}
+					priority
+					src='/ion-web-dark.svg'
 					width={340}
 				/>
 
 				<div className='space-y-3 text-center'>
 					<Typography
 						as='h1'
-						className='text-typeface-main mb-6'
-						size='medium'
-						typeface='title-normal'
+						className='text-text-main mb-6'
+						size='md'
+						typeface='title-default'
 					>
 						Bem-vindo ao Ion Starter Kit for Next.js
 					</Typography>
 
 					<Typography
 						as='p'
-						className='text-typeface-main'
-						size='medium'
-						typeface='body'
+						className='text-text-main'
+						size='md'
+						typeface='body-default'
 					>
 						Este é um projeto modelo para iniciar aplicações utilizando o design
 						system <strong>@ioasys/ion</strong>, privado e mantido pela ioasys.
@@ -60,9 +73,9 @@ export default function HomePage() {
 					<div>
 						<Typography
 							as='h3'
-							className='text-typeface-main'
-							size='large'
-							typeface='subtitle-normal'
+							className='text-text-main'
+							size='sm'
+							typeface='title-default'
 						>
 							Dependencies
 						</Typography>
@@ -71,9 +84,9 @@ export default function HomePage() {
 								<li key={dep}>
 									<Typography
 										as='p'
-										className='text-typeface-main'
-										size='small'
-										typeface='body'
+										className='text-text-main'
+										size='sm'
+										typeface='body-default'
 									>
 										{dep}: <strong>{version}</strong>
 									</Typography>
@@ -85,9 +98,9 @@ export default function HomePage() {
 					<div>
 						<Typography
 							as='h3'
-							className='text-typeface-main'
-							size='large'
-							typeface='subtitle-normal'
+							className='text-text-main'
+							size='sm'
+							typeface='title-default'
 						>
 							Dev Dependencies
 						</Typography>
@@ -96,9 +109,9 @@ export default function HomePage() {
 								<li key={dep}>
 									<Typography
 										as='p'
-										className='text-typeface-main'
-										size='small'
-										typeface='body'
+										className='text-text-main'
+										size='sm'
+										typeface='body-default'
 									>
 										{dep}: <strong>{version}</strong>
 									</Typography>
@@ -109,7 +122,7 @@ export default function HomePage() {
 				</div>
 			</div>
 
-			<footer className='text-typeface-main mt-8 text-sm'>
+			<footer className='text-text-main mt-8 text-sm'>
 				© {new Date().getFullYear()} ioasys — Starter Kit Ion + Next.js
 			</footer>
 		</main>

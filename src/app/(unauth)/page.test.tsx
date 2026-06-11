@@ -2,7 +2,15 @@ import type { ButtonProps, TypographyProps } from '@ioasys/ion-react'
 import { render, screen } from '@testing-library/react'
 import { describe, expect, it, vi } from 'vitest'
 
+import { ThemeProvider } from '@/contexts/theme'
 import HomePage from './page'
+
+const renderHomePage = () =>
+	render(
+		<ThemeProvider>
+			<HomePage />
+		</ThemeProvider>
+	)
 
 vi.mock('next/image', () => ({
 	__esModule: true,
@@ -25,7 +33,7 @@ vi.mock('@ioasys/ion', () => ({
 
 describe('HomePage', () => {
 	it('should render the main heading', () => {
-		render(<HomePage />)
+		renderHomePage()
 		expect(
 			screen.getByRole('heading', {
 				level: 1,
@@ -34,26 +42,29 @@ describe('HomePage', () => {
 		).toBeInTheDocument()
 	})
 
-	it('should render the Ion logo', () => {
-		render(<HomePage />)
-		expect(screen.getByAltText('@ioasys/ion logo')).toBeInTheDocument()
+	it('should render the Ion logo in light and dark variants', () => {
+		renderHomePage()
+		const logos = screen.getAllByAltText('@ioasys/ion-react logo')
+		expect(logos).toHaveLength(2)
+		expect(logos[0]).toHaveAttribute('src', '/ion-web.svg')
+		expect(logos[1]).toHaveAttribute('src', '/ion-web-dark.svg')
 	})
 
 	it('should render dependency lists', () => {
-		render(<HomePage />)
+		renderHomePage()
 		expect(screen.getByText(/next:/i)).toBeInTheDocument()
 		expect(screen.getAllByText(/react:/i)[0]).toBeInTheDocument()
 	})
 
 	it('should render the documentation button', () => {
-		render(<HomePage />)
+		renderHomePage()
 		expect(
 			screen.getByRole('button', { name: /Documentação do ion/i })
 		).toBeInTheDocument()
 	})
 
 	it('should render the wikijs button', () => {
-		render(<HomePage />)
+		renderHomePage()
 		expect(
 			screen.getByRole('button', { name: /Wikijs da ioasys/i })
 		).toBeInTheDocument()
