@@ -6,6 +6,20 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Starter kit oficial da ioasys para aplicações Next.js (App Router) com o design system privado **@ioasys/ion-react**. Stack: Next.js 16, React 19, TypeScript estrito, Tailwind CSS 4, Biome (lint + format), Vitest + Testing Library.
 
+## 🤖 Documentação do ion para IA — leia antes de gerar UI
+
+O pacote `@ioasys/ion-react` (>= 0.6.4) embarca a documentação completa do design system em `node_modules/@ioasys/ion-react/ai/`. Antes de gerar ou editar qualquer UI:
+
+1. `node_modules/@ioasys/ion-react/ai/llms.txt` — índice de toda a documentação (manifesto machine-readable em `ai/components.json`)
+2. `node_modules/@ioasys/ion-react/ai/dos-and-donts.md` — regras obrigatórias (✅/❌)
+3. `node_modules/@ioasys/ion-react/ai/components.md` — catálogo dos 37 componentes + árvore de decisão
+4. `node_modules/@ioasys/ion-react/ai/components/<Nome>.md` — props exatas, variantes válidas e exemplos do componente que for usar
+5. `node_modules/@ioasys/ion-react/ai/patterns.md` — receitas de composição (formulário, página, sidebar, modal…)
+6. `node_modules/@ioasys/ion-react/ai/icons.md` — nomes válidos de ícones (`IconName`)
+7. `node_modules/@ioasys/ion-react/ai/tokens-and-theme/` — cores, tipografia, espaçamento, temas
+
+Regras de ouro: importe sempre de `@ioasys/ion-react` (não recrie componentes); nunca invente variantes nem nomes de ícone; cores via props semânticas/tokens (nunca hex no `className`); texto via `Typography` (nunca `font-size` cru); temas claro/escuro são automáticos (nunca `dark:` hardcoded); `Button` para ação, `Link` para navegação.
+
 ## Registry privado
 
 O `@ioasys/ion-react` vem do registry Azure DevOps da ioasys, configurado no `.npmrc`. A instalação exige a variável de ambiente `IOASYS_NPM_TOKEN`. Use **npm** (o `package.json` bloqueia yarn) e Node >= 22 (`.nvmrc`).
