@@ -22,9 +22,17 @@ npx create-next-app@latest --example "https://github.com/ioasys/ion-starter-kit-
 
 Antes de começar, garanta que você tenha instalado:
 
-- **Node.js** (versão LTS recomendada)
-- **npm**, **yarn**, **pnpm** ou **bun**
+- **Node.js** >= 22 (veja o `.nvmrc`)
+- **npm** (este projeto usa npm — outros gerenciadores são bloqueados)
 - **Git** (necessário para clonar o template via `create-next-app`)
+
+Além disso, o `@ioasys/ion-react` é publicado no registry privado da ioasys. Para instalar as dependências, exporte o token de acesso:
+
+```bash
+export IOASYS_NPM_TOKEN=seu-token-aqui
+```
+
+> Solicite o token ao time de frontend da ioasys.
 
 ---
 
@@ -38,6 +46,22 @@ npm run dev
 ```
 
 A aplicação estará disponível em [http://localhost:3000](http://localhost:3000).
+
+### Scripts disponíveis
+
+| Comando                 | Descrição                                  |
+| ----------------------- | ------------------------------------------ |
+| `npm run dev`           | Servidor de desenvolvimento                |
+| `npm run build`         | Build de produção                          |
+| `npm start`             | Servir o build de produção                 |
+| `npm run lint`          | Lint com Biome                             |
+| `npm run lint:fix`      | Lint com correção automática               |
+| `npm run format`        | Formatação com Biome                       |
+| `npm run check-types`   | Checagem de tipos (`tsc --noemit`)         |
+| `npm test`              | Testes com Vitest (modo watch)             |
+| `npm run test:coverage` | Testes com relatório de cobertura          |
+
+> O pre-commit (husky + lint-staged) roda a checagem de tipos e o lint automaticamente.
 
 ---
 
@@ -58,11 +82,13 @@ A aplicação estará disponível em [http://localhost:3000](http://localhost:30
 O **@ioasys/ion** é o design system privado da ioasys, criado para garantir **consistência visual**, **qualidade de código** e **eficiência no desenvolvimento** das interfaces dos produtos da empresa.  
 Este starter kit traz uma configuração base pronta para uso, com:
 
-- Estrutura Next.js 15
+- Estrutura Next.js 16 (App Router) + React 19
 - Integração com o design system Ion
-- Configuração inicial de tipografia e tokens
-- Ambiente pronto para Storybook, lint e testes
-<!-- - Suporte a temas (light/dark)/ -->
+- Tailwind CSS 4 com tokens e tipografia do Ion
+- Suporte a temas (light/dark/system) sem flash de tema incorreto
+- Lint e formatação com Biome (pre-commit via husky)
+- Testes com Vitest + Testing Library
+- Sitemap e robots.txt gerados automaticamente
 
 ---
 
@@ -71,9 +97,9 @@ Este starter kit traz uma configuração base pronta para uso, com:
 ```
 ├── public/              # Assets públicos (ícones, logos, etc.)
 ├── src/
-│   ├── app/             # Rotas e páginas Next.js
-│   ├── components/      # Componentes
-│   ├── contexts/        # React contexts e providers
+│   ├── app/             # Rotas e páginas Next.js (App Router)
+│   ├── components/      # Componentes (atomic design)
+│   ├── contexts/        # React contexts e providers (ex.: tema)
 │   ├── hooks/           # Hooks reutilizáveis
 │   ├── services/        # Chamadas a APIs e integrações
 │   ├── types/           # Tipagens TypeScript
@@ -92,5 +118,5 @@ O conteúdo, código e design system **não devem ser compartilhados publicament
 
 ---
 
-**ioasys © 2025** — Starter Kit Ion + Next.js  
+**ioasys © 2026** — Starter Kit Ion + Next.js  
 Desenvolvido com 💜 pelo time de frontend.
